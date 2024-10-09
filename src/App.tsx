@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { useLocalStorage } from "react-use";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -8,27 +9,49 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 
 /**
- * The root component of the website.
+ * The main App component of the website.
  *
- * Manages the dark mode state and adds or removes the "dark" class from
- * `document.documentElement` based on the state. The component also wraps the
- * entire app in a container element with a gradient background and a transition
- * effect on the background color.
+ * This component stores the dark mode state in local storage and updates the
+ * `dark` class on the root `html` element when the state changes. It also
+ * toggles the dark mode state when the user clicks the dark mode toggle button
+ * in the `Header` component.
  *
- * The `Header` component is rendered with the `darkMode` and `toggleDarkMode`
- * props, and the `Hero`, `About`, `Skills`, `Projects`, and `Contact` components
- * are rendered as children of the container element.
+ * The App component renders the following components:
+ *
+ * 1. `Header`
+ * 2. `Hero`
+ * 3. `About`
+ * 4. `Skills`
+ * 5. `Projects`
+ * 6. `Contact`
+ *
+ * The components are wrapped in a `motion.div` to animate their opacity when
+ * the component is mounted.
+ *
+ * @returns {JSX.Element} The App component
  */
 function App() {
   const [darkMode, setDarkMode] = useState(false);
+  const [storedDarkMode, setStoredDarkMode] = useLocalStorage(
+    "darkMode",
+    false
+  );
 
   useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
+    if (storedDarkMode) {
+      setDarkMode(storedDarkMode);
     }
-  }, [darkMode]);
+  }, [storedDarkMode]);
+
+  useEffect(() => {
+    const root = window.document.documentElement;
+    if (darkMode) {
+      root.classList.add("dark");
+    } else {
+      root.classList.remove("dark");
+    }
+    setStoredDarkMode(darkMode);
+  }, [darkMode, setStoredDarkMode]);
 
   /**
    * Toggles the dark mode state.

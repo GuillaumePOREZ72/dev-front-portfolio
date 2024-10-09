@@ -67,7 +67,7 @@ const Contact = () => {
         <h2 className="text-4xl font-bold mb-6 text-gray-900 dark:text-white">
           Contactez-moi
         </h2>
-        <p className="text-xl mb-8 text-gray-700 dark:text-gray-300">
+        <p className="text-xl leading-relaxed mb-8 text-gray-700 dark:text-gray-300">
           N'hésitez pas à me contacter pour discuter de vos projets ou
           opportunités de collaboration.
         </p>

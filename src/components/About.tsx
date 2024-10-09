@@ -14,7 +14,7 @@ const About = () => {
       >
         <h2 className="text-4xl font-bold mb-6">À propos de moi</h2>
         <motion.p
-          className="text-xl mb-6"
+          className="text-xl leading-relaxed mb-6"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.8 }}

@@ -19,6 +19,7 @@ const Hero = (): JSX.Element => {
       projectsSection.scrollIntoView({ behavior: "smooth" });
     }
   };
+
   return (
     <section
       id="accueil"
@@ -31,7 +32,7 @@ const Hero = (): JSX.Element => {
         transition={{ duration: 0.8 }}
       >
         <motion.h1
-          className="text-5xl font-bold mb-4 text-gray-900 dark:text-white"
+          className="text-6xl font-bold mb-4 text-gray-900 dark:text-white"
           animate={{ color: ["#1F2937", "#00FFFF", "#87CEFA", "#1F2937"] }}
           transition={{ duration: 5, repeat: Infinity }}
         >
