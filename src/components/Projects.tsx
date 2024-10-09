@@ -25,7 +25,7 @@ const Projects = () => {
   return (
     <section
       id="projets"
-      className="section bg-gray-100 dark:bg-gray-800 transition-colors duration-300"
+      className="section bg-white/30 dark:bg-gray-800/30 transition-colors duration-300"
     >
       <h2 className="text-4xl font-bold mb-10 text-center text-gray-900 dark:text-white">
         Mes Projets
@@ -34,7 +34,7 @@ const Projects = () => {
         {projects.map((project, index) => (
           <motion.div
             key={project.title}
-            className="bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-lg cursor-pointer"
+            className="bg-white/70 dark:bg-gray-700/70 rounded-lg overflow-hidden shadow-lg cursor-pointer backdrop-blur-sm"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.2 }}

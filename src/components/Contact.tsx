@@ -56,7 +56,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="section bg-white dark:bg-gray-900 transition-colors duration-300"
+      className="section bg-transparent transition-colors duration-300"
     >
       <motion.div
         className="max-w-3xl mx-auto text-center"
@@ -67,7 +67,7 @@ const Contact = () => {
         <h2 className="text-4xl font-bold mb-6 text-gray-900 dark:text-white">
           Contactez-moi
         </h2>
-        <p className="text-lg mb-8 text-gray-700 dark:text-gray-300">
+        <p className="text-xl mb-8 text-gray-700 dark:text-gray-300">
           N'hésitez pas à me contacter pour discuter de vos projets ou
           opportunités de collaboration.
         </p>
@@ -93,7 +93,7 @@ const Contact = () => {
               value={formData.name}
               onChange={handleChange}
               required
-              className="w-full px-3 py-2 text-gray-900 dark:text-white bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-secondary-light dark:focus:ring-secondary-dark"
+              className="w-full px-3 py-2 text-gray-900 dark:text-white bg-white/70 dark:bg-gray-800/70 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-secondary-light dark:focus:ring-secondary-dark backdrop-blur-sm"
             />
           </div>
           <div className="mb-4">
@@ -110,7 +110,7 @@ const Contact = () => {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full px-3 py-2 text-gray-900 dark:text-white bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-secondary-light dark:focus:ring-secondary-dark"
+              className="w-full px-3 py-2 text-gray-900 dark:text-white bg-white/70 dark:bg-gray-800/70 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-secondary-light dark:focus:ring-secondary-dark backdrop-blur-sm"
             />
           </div>
           <div className="mb-4">
@@ -127,7 +127,7 @@ const Contact = () => {
               onChange={handleChange}
               required
               rows={4}
-              className="w-full px-3 py-2 text-gray-900 dark:text-white bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-secondary-light dark:focus:ring-secondary-dark"
+              className="w-full px-3 py-2 text-gray-900 dark:text-white bg-white/70 dark:bg-gray-800/70 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-secondary-light dark:focus:ring-secondary-dark backdrop-blur-sm"
             ></textarea>
           </div>
           <motion.button
@@ -159,14 +159,14 @@ const Contact = () => {
 
         <div className="flex justify-center space-x-6">
           <motion.a
-            href="mailto:votre-email@example.com"
+            href="mailto:guillaumeporez@orange.fr"
             className="text-gray-700 dark:text-gray-300 hover:text-secondary-light dark:hover:text-secondary-dark transition-colors"
             whileHover={{ scale: 1.1 }}
           >
             <Mail size={32} />
           </motion.a>
           <motion.a
-            href="https://www.linkedin.com/in/votre-profil"
+            href="https://www.linkedin.com/in/guillaume-porez-pro"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-700 dark:text-gray-300 hover:text-secondary-light dark:hover:text-secondary-dark transition-colors"
@@ -175,7 +175,7 @@ const Contact = () => {
             <Linkedin size={32} />
           </motion.a>
           <motion.a
-            href="https://github.com/votre-username"
+            href="https://github.com/GuillaumePOREZ72"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-700 dark:text-gray-300 hover:text-secondary-light dark:hover:text-secondary-dark transition-colors"

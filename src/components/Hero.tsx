@@ -10,6 +10,9 @@ import { motion } from "framer-motion";
  * @returns {JSX.Element} The hero section of the website
  */
 const Hero = (): JSX.Element => {
+  /**
+   * Scrolls to the projects section of the website with a smooth animation.
+   */
   const scrollToProjects = () => {
     const projectsSection = document.getElementById("projets");
     if (projectsSection) {
@@ -19,7 +22,7 @@ const Hero = (): JSX.Element => {
   return (
     <section
       id="accueil"
-      className="section bg-white dark:bg-gray-900 transition-colors duration-300"
+      className="section bg-transparent transition-colors duration-300"
     >
       <motion.div
         className="text-center"
@@ -43,7 +46,7 @@ const Hero = (): JSX.Element => {
           Créatif, passionné et toujours à la pointe de la technologie
         </motion.p>
         <motion.button
-          className="bg-secondary-light dark:bg-secondary-dark text-white dark:text-gray-900 px-6 py-3 rounded-full font-semibold"
+          className="bg-secondary-light dark:bg-secondary-dark text-white dark:text-gray-900 px-6 py-3 rounded-full font-semibold transition-colors duration-300 hover:bg-tertiary-light dark:hover:bg-tertiary-dark"
           whileHover={{
             scale: 1.05,
             rotate: [0, 2, -2, 0],

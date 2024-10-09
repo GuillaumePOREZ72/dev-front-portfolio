@@ -18,10 +18,10 @@ app.post("/send-email", async (req, res) => {
 
   try {
     const data = await resend.emails.send({
-      from: "Portfolio Contact <onboarding@resend.dev>",
-      to: "your-email@example.com", // Replace with your email
+      from: "guillaume.porez@oclock.school",
+      to: "guillaumeporez@orange.fr",
       subject: "New Contact Form Submission",
-      text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
+      html: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
     });
 
     res.status(200).json({ message: "Email sent successfully", data });

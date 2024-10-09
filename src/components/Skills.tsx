@@ -15,11 +15,19 @@ const skills = [
   "RESTful APIs",
 ];
 
+/**
+ * Component that renders the skills section of the website.
+ *
+ * The skills section contains a title, and a grid of skills. Each skill is
+ * animated with a fade-in and a hover animation.
+ *
+ * @returns {JSX.Element} The skills section of the website
+ */
 const Skills = () => {
   return (
     <section
       id="compétences"
-      className="section bg-white dark:bg-gray-900 transition-colors duration-300"
+      className="section bg-transparent transition-colors duration-300"
     >
       <h2 className="text-4xl font-bold mb-10 text-gray-900 dark:text-white">
         Compétences
@@ -28,7 +36,7 @@ const Skills = () => {
         {skills.map((skill, index) => (
           <motion.div
             key={skill}
-            className="bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white p-4 rounded-lg text-center cursor-pointer"
+            className="bg-white/50 dark:bg-gray-700/50 text-lg text-gray-900 dark:text-white p-4 rounded-lg text-center cursor-pointer backdrop-blur-sm"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}

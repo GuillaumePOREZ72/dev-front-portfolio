@@ -4,7 +4,7 @@ const About = () => {
   return (
     <section
       id="à-propos"
-      className="section bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white transition-colors duration-300"
+      className="section bg-white/30 dark:bg-gray-800/30 text-gray-900 dark:text-white transition-colors duration-300"
     >
       <motion.div
         className="max-w-3xl mx-auto text-center"
@@ -14,7 +14,7 @@ const About = () => {
       >
         <h2 className="text-4xl font-bold mb-6">À propos de moi</h2>
         <motion.p
-          className="text-lg mb-6"
+          className="text-xl mb-6"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.8 }}
@@ -25,7 +25,7 @@ const About = () => {
           et performants.
         </motion.p>
         <motion.p
-          className="text-lg"
+          className="text-xl"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.6, duration: 0.8 }}

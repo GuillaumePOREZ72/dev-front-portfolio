@@ -33,7 +33,7 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
     };
   }, [isOpen]);
 
-  const navItems = ["à-propos", "compétences", "projets", "contact"];
+  const navItems = ["accueil", "à-propos", "compétences", "projets", "contact"];
 
   return (
     <motion.header
