@@ -4,23 +4,35 @@ const projects = [
   {
     title: "E-commerce React",
     description: "Une plateforme e-commerce moderne avec React et Redux",
+    link: "",
     image:
       "https://images.unsplash.com/photo-1557821552-17105176677c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
   },
   {
     title: "Dashboard Analytics",
     description: "Un tableau de bord interactif avec des graphiques dynamiques",
+    link: "",
     image:
       "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
   },
   {
     title: "Application Météo",
     description: "Une app météo élégante utilisant une API de prévisions",
+    link: "",
     image:
       "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
   },
 ];
 
+/**
+ * Component that renders the projects section of the website.
+ *
+ * The projects section contains a title, a grid of projects and a hover animation
+ * that reveals a "Voir le projet" button. Each project contains an image, a title
+ * and a description. The component is animated with framer motion.
+ *
+ * @returns {JSX.Element} The projects section of the website
+ */
 const Projects = () => {
   return (
     <section

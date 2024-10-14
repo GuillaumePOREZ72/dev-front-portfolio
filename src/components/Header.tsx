@@ -7,6 +7,16 @@ interface HeaderProps {
   toggleDarkMode: () => void;
 }
 
+/**
+ * A responsive header component that displays the site title and navigation
+ * items. The component is animated with Framer Motion and includes a dark
+ * mode toggle button. The navigation items are hidden on mobile devices and
+ * can be toggled using the menu button.
+ *
+ * @param {boolean} darkMode - The current dark mode state
+ * @param {() => void} toggleDarkMode - The function to toggle the dark mode
+ * @returns {React.ReactElement} The Header component
+ */
 const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -68,7 +78,7 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
             className="cursor-pointer"
           >
             {darkMode ? (
-              <Sun className="text-yellow-400" />
+              <Sun className="text-gray-500" />
             ) : (
               <Moon className="text-gray-600" />
             )}
