@@ -19,9 +19,8 @@ export default {
         sans: ["Manrope", "sans-serif"],
       },
       backgroundImage: {
-        "gradient-light": "linear-gradient(to bottom right, #f5f5f5, #e0e0e0)",
-        "gradient-dark":
-          "linear-gradient(to bottom right, #1a263d, #141a2d, #0f111b)",
+        "gradient-light": "linear-gradient(to bottom right, #ffffff, #d2f2ff)", // Changed to lighter blues
+        "gradient-dark": "linear-gradient(to bottom right, #1a263d, #0f111b)",
       },
     },
   },

@@ -53,7 +53,22 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
       transition={{ duration: 0.5 }}
     >
       <nav className="container mx-auto flex justify-between items-center py-4 px-6">
-        <motion.div className="flex items-center" whileHover={{ scale: 1.1 }}>
+        <motion.div
+          className="flex items-center"
+          whileHover={{
+            scale: 1.05,
+            rotate: [0, 2, -2, 0],
+            transition: {
+              duration: 0.3,
+              rotate: {
+                repeat: Infinity,
+                repeatType: "reverse",
+                duration: 0.5,
+              },
+            },
+          }}
+          whileTap={{ scale: 0.95 }}
+        >
           <Code className="text-secondary-light dark:text-secondary-dark mr-2" />
           <span className="text-xl font-bold text-gray-900 dark:text-white">
             Guillaume Porez
@@ -64,14 +79,16 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
           {navItems.map((item) => (
             <motion.li key={item} whileHover={{ scale: 1.1 }}>
               <button
+                aria-label={`Go to ${item}`}
                 onClick={() => scrollToSection(item)}
-                className="text-gray-900 dark:text-white hover:text-secondary-light dark:hover:text-secondary-dark transition-colors"
+                className="text-gray-900 font-semibold dark:text-white hover:text-secondary-light dark:hover:text-secondary-dark transition-colors"
               >
                 {item.charAt(0).toUpperCase() + item.slice(1)}
               </button>
             </motion.li>
           ))}
           <motion.li
+            aria-label="Toggle dark mode"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             onClick={toggleDarkMode}
@@ -90,6 +107,7 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
           onClick={toggleMenu}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
+          aria-label="Toggle Menu"
         >
           {isOpen ? <X /> : <Menu />}
         </motion.button>
@@ -112,6 +130,7 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
                   whileHover={{ scale: 1.1 }}
                 >
                   <button
+                    aria-label={`Go to ${item}`}
                     onClick={() => scrollToSection(item)}
                     className="text-gray-900 dark:text-white hover:text-secondary-light dark:hover:text-secondary-dark transition-colors"
                   >
@@ -120,6 +139,7 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
                 </motion.li>
               ))}
               <motion.li
+                aria-label="Toggle dark mode"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 onClick={toggleDarkMode}

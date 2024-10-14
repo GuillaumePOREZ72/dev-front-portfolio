@@ -159,6 +159,7 @@ const Contact = () => {
 
         <div className="flex justify-center space-x-6">
           <motion.a
+            aria-label="Email"
             href="mailto:guillaumeporez@orange.fr"
             className="text-gray-700 dark:text-gray-300 hover:text-secondary-light dark:hover:text-secondary-dark transition-colors"
             whileHover={{ scale: 1.1 }}
@@ -166,6 +167,7 @@ const Contact = () => {
             <Mail size={32} />
           </motion.a>
           <motion.a
+            aria-label="LinkedIn Profile"
             href="https://www.linkedin.com/in/guillaume-porez-pro"
             target="_blank"
             rel="noopener noreferrer"
@@ -175,6 +177,7 @@ const Contact = () => {
             <Linkedin size={32} />
           </motion.a>
           <motion.a
+            aria-label="GitHub Profile"
             href="https://github.com/GuillaumePOREZ72"
             target="_blank"
             rel="noopener noreferrer"

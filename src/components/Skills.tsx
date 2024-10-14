@@ -36,7 +36,7 @@ const Skills = () => {
         {skills.map((skill, index) => (
           <motion.div
             key={skill}
-            className="bg-white/50 dark:bg-gray-700/50 text-lg text-gray-900 dark:text-white p-4 rounded-lg text-center cursor-pointer backdrop-blur-sm"
+            className="bg-white/50 dark:bg-gray-700/50 text-lg text-gray-900 dark:text-white m-4 p-8 rounded-lg text-center cursor-pointer backdrop-blur-sm"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}

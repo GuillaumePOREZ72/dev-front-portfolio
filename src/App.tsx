@@ -30,6 +30,7 @@ import Contact from "./components/Contact";
  *
  * @returns {JSX.Element} The App component
  */
+
 function App() {
   const [darkMode, setDarkMode] = useState(false);
   const [storedDarkMode, setStoredDarkMode] = useLocalStorage(
