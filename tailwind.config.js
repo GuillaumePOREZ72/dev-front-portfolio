@@ -7,11 +7,11 @@ export default {
       colors: {
         primary: "#000000",
         secondary: {
-          light: "#00FFFF",
+          light: "#0056b3",
           dark: "#87CEFA",
         },
         tertiary: {
-          light: "#87CEFA",
+          light: "#003366",
           dark: "#00FFFF",
         },
       },
@@ -19,10 +19,9 @@ export default {
         sans: ["Manrope", "sans-serif"],
       },
       backgroundImage: {
-        "gradient-light":
-          "linear-gradient(to bottom right, #F0FFFF, #E6F7FF, #D9F2FF)",
+        "gradient-light": "linear-gradient(to bottom right, #f5f5f5, #e0e0e0)",
         "gradient-dark":
-          "linear-gradient(to bottom right, #2c4770, #26285e, #21234a)",
+          "linear-gradient(to bottom right, #1a263d, #141a2d, #0f111b)",
       },
     },
   },

@@ -26,8 +26,18 @@ app.post("/send-email", async (req, res) => {
 
     res.status(200).json({ message: "Email sent successfully", data });
   } catch (error) {
-    console.error("Error sending email:", error);
-    res.status(500).json({ error: "Failed to send email" });
+    console.error("Error sending email:", error.message);
+    let errorMessage = "Failed to send email";
+    if (error.message.includes("Invalid API key")) {
+      errorMessage = "Invalid Resend API key";
+    } else if (error.message.includes("Email address not verified")) {
+      errorMessage = "Sender email address not verified with Resend";
+    } else if (error.message.includes("Invalid recipient email")) {
+      errorMessage = "Invalid recipient email address";
+    } else if (error.message.includes("Rate limit exceeded")) {
+      errorMessage = "Resend API rate limit exceeded. Try again later.";
+    }
+    res.status(500).json({ error: errorMessage });
   }
 });
 

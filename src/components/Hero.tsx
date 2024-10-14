@@ -32,8 +32,8 @@ const Hero = (): JSX.Element => {
         transition={{ duration: 0.8 }}
       >
         <motion.h1
-          className="text-6xl font-bold mb-4 text-gray-900 dark:text-white"
-          animate={{ color: ["#1F2937", "#00FFFF", "#87CEFA", "#1F2937"] }}
+          className="text-6xl font-bold mb-4 text-gray-800 dark:text-white"
+          animate={{ color: ["#1F2937", "#008080", "#87CEFA", "#1F2937"] }}
           transition={{ duration: 5, repeat: Infinity }}
         >
           Développeur Web Front-End
